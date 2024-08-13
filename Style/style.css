@@ -586,10 +586,10 @@ hr{
         flex-direction: column;
       }
       .footer-widget-1{
-        max-width: 100%;
+        max-width: calc(100% - 30px);
       }
       .footer-widget-2{
-        max-width: 100%;
+        max-width: calc(100% - 30px);
       }
 
   }
