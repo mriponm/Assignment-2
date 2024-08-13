@@ -15,6 +15,7 @@
     margin: 0; 
     padding: 0;
     background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
    } 
   :root{
     --primary-color:rgb(230, 83, 60);
@@ -64,6 +65,12 @@
 
   main>section{
     margin-bottom: 100px;
+  }
+  .sub-title{
+    font-size: 1.9rem;
+    color: var(--white-color);
+    font-weight: 900;
+    line-height: 120%;
   }
 
   /* Header Styles */
@@ -264,7 +271,176 @@
     max-width: 100%;
     border-radius: 18px;
   }
-  /* Mobile Responsive Style */
+
+  /* BMI Calculator Section */
+  .bmi-conatiner{
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+    background-color: var(--section-bg-color);
+  }
+  .bmi-calculator{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    margin: 0 auto;
+  }
+  .bmi-chart{
+    max-width: 50%;
+  }
+  .bmi-calculate{
+    max-width: 50%;
+  }
+  table{
+    border-collapse:collapse;
+  }
+  td, tr, th{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+  }
+  thead, th{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-color);
+    text-align: center;
+  }
+  tbody>tr,td{
+    color: var(--white-color);
+    font-size: .8rem;
+    font-weight: 300;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.322);
+  }
+ form>input, select {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+ }
+
+ select option {
+  background: #222222;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+#height, #weight{
+  width: 38.5%;
+}
+#age, #sex{
+  width: 42%;
+}
+#activity-factor{
+  width: 95%;
+}
+/* Blog Section Style */
+.blog-head{
+  text-align: center;
+}
+.blog{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.blog-item>img{
+  max-width: 100%;
+  border-radius: 8px;
+}
+.blog-item{
+  text-align: center;
+  padding: 15px 0;
+  border: 1px solid var(--section-bg-color);
+  padding: 15px;
+  border-radius: 8px;
+}
+.blog-title{
+  font-size: 1.2rem;
+  color: var(--white-color);
+}
+/* Team Member section */
+.team-head{
+  text-align: center;
+  max-width: 670px;
+  margin: 0 auto;
+}
+.teams{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  background-color: var(--section-bg-color);
+  border-radius: 8px;
+  padding-top: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.member-pic img{
+  width: 326.67px;
+  height: 272px;
+  border-radius: 18px;
+}
+.member-bio{
+  position: relative;
+  bottom: 60px;
+  left: 30px;
+}
+.member-name{
+  font-size: 1rem;
+  color: var(--white-color);
+  margin: 0;
+}
+.member-description{
+  font-size: 0.8rem;
+  color: var(--Text-color);
+  margin: 5px 0;
+}
+
+/* Footer */
+footer{
+  background-color: var(--section-bg-color);
+}
+.footer-style{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.footer-layout{
+  display: flex;
+  justify-content: space-around;
+}
+.footer-widget-1{
+  max-width: 40%;
+}
+.footer-widget-2{
+  max-width: 60%;
+}
+.footer-menu{
+  list-style: none;
+}
+.footer-widget-2 ul li a{
+  text-decoration: none;
+  color: var(--Text-color);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.footer-widget-2 ul li{
+  margin-bottom: 20px;
+  margin-left: -30px;
+}
+hr{
+  margin-top: 10px;
+  height: 1px;
+  border: none;
+  background-color: var(--Text-color);
+}
+.footer-copyright{
+  text-align: center;
+}
+
+/* Mobile Responsive Style */
     
     @media screen and (max-width:576px) {
     /* Header and Hero */
@@ -363,5 +539,57 @@
       .run-extra-images{
         max-width: 100%;
       }
-      
+      /* BMI Section Responsive */
+      .bmi-section{
+        padding: 20px;
+      }
+      .bmi-calculator{
+        width: calc(100% - 45px);
+        flex-direction: column;
+        padding: 20px;
+        gap: 35px;
+        
+      }
+      .sub-title{
+        font-size: 1rem;
+      }
+      .bmi-chart{
+        max-width: 100%;
+      }
+      .bmi-calculate{
+        max-width: 100%;
+      }
+      #height, #weight{
+        width: 30%;
+      }
+      #age, #sex{
+        width: 35%;
+      }
+      #activity-factor{
+        width: 87%;
+      }
+      /* Blog Section */
+      .blog{
+        grid-template-columns: repeat(1, 1fr);
+      }
+      /* Team Member */
+      .teams{
+        max-width: calc(100% - 20px);
+        grid-template-columns: repeat(1, 1fr);
+      }
+      /* Footer */
+      .footer-style{
+        padding: 20px;
+        max-width: calc(100% - 70px);
+      }
+      .footer-layout{
+        flex-direction: column;
+      }
+      .footer-widget-1{
+        max-width: 100%;
+      }
+      .footer-widget-2{
+        max-width: 100%;
+      }
+
   }
