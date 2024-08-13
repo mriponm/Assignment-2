@@ -129,6 +129,9 @@
 .hero-content{
     max-width: 50%;
 }
+.hero-content>.hero-title, .description, .hero-button{
+  padding-bottom: 24px;
+}
 .hero-banner-style{
   max-width: 50%;
 }
@@ -141,6 +144,7 @@
     font-weight: 900;
     color: var(--white-color);
     line-height: 120%;
+    margin-bottom: 28px;
 }
 .hero-title-shape{
     font-family: miama;
@@ -151,8 +155,6 @@
 .description{
   font-size: 1rem;
   color:var(--Text-color);
-  margin-top: 5px;
-  margin-bottom: 5px;
 
 }
 
