@@ -232,12 +232,15 @@
     max-width: 60%;
     margin: 0 auto;
   }
-  .havits-items{
+  .habits-items{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
     padding-top: 58px;
     margin: 0 auto;
+  }
+  .habits-item{
+    margin: 20px 10px;
   }
   .habits-image{
     max-width: 100%;
@@ -522,7 +525,7 @@ hr{
       .habits-contents{
         max-width: 80%;
       }
-      .havits-items{
+      .habits-items{
         max-width: 80%;
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
